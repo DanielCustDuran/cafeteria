@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'core',
     'Services.apps.ServicesConfig',
     'blog',
+    'ckeditor',
     'social.apps.SocialConfig',
     'pages.apps.PagesConfig',
 ]
@@ -136,3 +137,17 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_cdn')
 # uploaded user files
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media_cdn')
+
+#ckeditor
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ]
+    }
+}

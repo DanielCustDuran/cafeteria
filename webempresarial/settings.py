@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'core',
     'Services.apps.ServicesConfig',
     'blog',
+    'social.apps.SocialConfig',
+    'pages.apps.PagesConfig',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +67,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #add new context processors
+                'social.processors.ctx_dict',
+                'pages.processors.ctx_dict',
             ],
         },
     },
